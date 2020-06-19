@@ -8,7 +8,7 @@ sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 sudo apt-get update
 
 # Install
-sudo apt-get install kubeadm kubelet kubectl
+sudo apt-get -y install kubeadm kubelet kubectl
 sudo apt-mark hold kubeadm kubelet kubectl
 
 # Verify
