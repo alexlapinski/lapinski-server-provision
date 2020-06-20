@@ -1,10 +1,10 @@
 #!/bin/sh
+source ../functions/index.sh
 
-# Setup
-sudo apt-get update
+update()
 
 # Install
-sudo apt-get install -y docker.io
+install("docker.io")
 
 # Enable
 sudo systemctl enable docker
