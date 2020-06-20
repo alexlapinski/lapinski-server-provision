@@ -1,7 +1,7 @@
 #!/bin/sh
-source ../functions/index.sh
+source ../functions/001-apt.sh
 
 # Update
-update()
+update
 
-install("nginx")
+install "nginx"

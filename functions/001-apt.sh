@@ -4,8 +4,8 @@
 # @params None
 #
 update() {
-    echo "## APT Update";
-    sudo apt-get update;
+    echo "## APT Update"
+    sudo apt-get update
     echo "## DONE\n"
 }
 
