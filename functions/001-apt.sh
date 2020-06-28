@@ -3,7 +3,7 @@
 #
 # @params None
 #
-update() {
+apt-update() {
     echo "## APT Update"
     sudo apt-get update
     echo "## DONE\n"
@@ -14,7 +14,7 @@ update() {
 #
 # @params list of package names (space separated)
 #
-install() {
+apt-install() {
     echo "## APT Installing"
     sudo apt-get install -y $@
     echo "## DONE\n"
