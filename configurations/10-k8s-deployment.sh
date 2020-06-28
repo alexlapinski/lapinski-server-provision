@@ -26,6 +26,11 @@ echo "[$STEP_NUMBER].3 Initalizing Network with CIDR $POD_CIDR"
 sudo kubeadm init --pod-network-cidr=$POD_CIDR
 echo "[$STEP_NUMBER].3 DONE"
 
+# Setup Configuration on the Primary/Main node
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
 echo "[$STEP_NUMBER].4 SWAPON"
 sudo swapon -a
 echo "[$STEP_NUMBER].4 DONE"

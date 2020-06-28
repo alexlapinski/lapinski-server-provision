@@ -1,12 +1,16 @@
 #!/bin/sh
 
-# echo "SWAPOFF"
-# sudo swapoff -a
+# Prepare
+echo "SWAPOFF"
+sudo swapoff -a
 
+# Install / Setup Flannel Networking
 sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
 # Verify
 kubectl get pods --all-namespaces
 
-# echo "SWAPON"
-# sudo swapon -a
+# Cleanup
+echo "SWAPON"
+sudo swapon -a
+echo "DONE"
