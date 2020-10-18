@@ -3,9 +3,9 @@ source ../functions/001-apt.sh
 
 # Update
 sudo add-apt-repository universe
-update
+sudo apt update
 
-install "exfat-fuse exfat-utils"
+sudo apt install -y exfat-fuse exfat-utils
 
 
 # Install
@@ -23,8 +23,9 @@ sudo dpkg -i "../binaries/plexmediaserver_$VERSION.deb"
 #
 
 sudo chmod go+rx /media/alex
+sudo chmod go+rx /mnt
 
 # drives=$(ls /media/alex)
 # TODO: Use variable list
 sudo chmod go+rx /media/alex/terrabyte_drive
-sudo chmod go+rx /media/alex/portable_drive
+sudo chmod go+rx /media/alex/LapinskiBak
